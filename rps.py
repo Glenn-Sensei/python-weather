@@ -30,8 +30,10 @@ def rps():
 
         computer = int(computerchoice)
 
-        print('\nYou chose ' + str(RPS(player)).replace('RPS.', '') + '.')
-        print('Python chose ' + str(RPS(computer)).replace('RPS.', '') + '.\n')
+        print(f'\nYou chose {str(RPS(player)).replace('RPS.', '').title()}.')
+        print(
+            f'Python chose {str(RPS(computer)).replace('RPS.', '').title()}.\n'
+        )
 
         def decide_winner(player, computer):
             nonlocal player_wins
@@ -58,11 +60,12 @@ def rps():
         nonlocal game_count
         game_count += 1
 
-        print('\nGame count: ' + str(game_count))
-        print('\nPlayer wins: ' + str(player_wins))
-        print('\nPython wins: ' + str(python_wins))
+        print(f'\nGame count: {str(game_count)}')
+        print(f'\nPlayer wins: {str(player_wins)}')
+        print(f'\nPython wins: {str(python_wins)}')
 
         print('\nPlay again?')
+
         while True:
             playagain = input('\nY for Yes or \nQ to quit \n\n')
             if playagain.lower() not in ['y', 'q']:
